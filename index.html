@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+    <link rel="stylesheet" href="css/style.css">
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+    <main>
+        <div class="logo">
+            <img src="images/logo.svg" alt="splitter, logo of tip calculator">
+        </div>        
+        <div class="container">
+            <div class="input">
+                <div class="input__bill">
+                    <label for="bill">Bill</label>
+                    <input type="number" id="bill" name="bill" class="box" placeholder="0">
+                    <img src="images/icon-dollar.svg" alt="">
+                </div>
+                <div class="input__select-tip">
+                    <label>Select Tip %</label>
+                    <div class="tip-buttons">
+                        <button>5%</button>
+                        <button>10%</button>
+                        <button>15%</button> 
+                        <button>25%</button>
+                        <button>50%</button>
+                        <input type="number" id="custom" name="custom" class="box" placeholder="Custom" aria-label="custom tip">  
+                    </div>
+                </div>
+                <div class="input__people">
+                    <label for="people">Number of People</label>
+                    <input type="number" id="people" name="people" class="box" placeholder="0">
+                    <img src="images/icon-person.svg" alt="">
+                </div>
+            </div>
+            <div class="output">              
+                <div class="output__tip">
+                    <div>
+                        <p>Tip Amount</p>
+                        <p>/ person</p>
+                    </div>
+                    <p>$0.00</p>
+                </div>
+                <div class="output__total">
+                    <div>
+                        <p>Total</p>
+                        <p>/ person</p>
+                    </div>
+                    <p>$0.00</p>
+                </div>
+                <button type="button" class="reset-btn" id="reset-btn" disabled>Reset</button>
+            </div>            
+        </div> <!-- container closed -->
+    </main> 
+    <script src="script.js"></script>             
+</body>
+</html>

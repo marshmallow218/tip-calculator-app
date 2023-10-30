@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   /* border: 1px solid red; */
+}
+
+html {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    scroll-behavior: smooth;
+}
+
+.grid {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    @extend .grid;
+    min-height: 100vh;
+    background-color: $light-grayish-cyan;
+}
+
+.logo {
+    @extend .grid;
+    margin: 1em 0 3em;
+}
+
+.container {
+    display: grid;
+    gap: 1rem;
+    font-size: 0.9375rem;
+    color: $dark-grayish-cyan;
+    padding: 1.5rem;
+    border-radius: 16px 16px 0 0;
+    background-color: $white;    
+}
+
+.input {
+    display: grid;
+    gap: 1rem;
+    padding: 0.5rem;
+    
+    .box {
+        font: inherit;
+        font-size: 1.5rem;
+        padding: 0.4rem 0.8rem;
+        width: 100%;
+        text-align: right;        
+        border: none;
+        border-radius: 5px;
+        background-color: $very-light-grayish-cyan;
+        
+        :placeholder {
+            color: $very-dark-cyan;
+        }
+    }
+    
+    .input__bill {
+        position: relative;
+        display: grid;
+        gap: 0.4em;
+        
+        img {
+            position: absolute;
+            top: 45px;
+            left: 15px;
+        }               
+    }
+}
+
+.output {
+    padding: 1.5rem;
+    background-color: $very-dark-cyan;
+}
+
+

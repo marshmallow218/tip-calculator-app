@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+html {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  scroll-behavior: smooth;
+}
+
+.grid, .logo, body {
+  display: grid;
+  place-items: center;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.logo {
+  margin: 1em 0 3em;
+}
+
+.container {
+  display: grid;
+  gap: 1rem;
+  font-size: 0.9375rem;
+  color: hsl(186, 14%, 43%);
+  padding: 1.5rem;
+  border-radius: 16px 16px 0 0;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.input {
+  display: grid;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.input .box {
+  font: inherit;
+  font-size: 1.5rem;
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+}
+.input .box :placeholder {
+  color: hsl(183, 100%, 15%);
+}
+.input .input__bill {
+  position: relative;
+  display: grid;
+  gap: 0.4em;
+}
+.input .input__bill img {
+  position: absolute;
+  top: 45px;
+  left: 15px;
+}
+
+.output {
+  padding: 1.5rem;
+  background-color: hsl(183, 100%, 15%);
+}
+
+/*# sourceMappingURL=style.css.map */
