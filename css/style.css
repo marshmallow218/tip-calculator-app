@@ -28,7 +28,7 @@ body {
 
 .container {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   font-size: 0.9375rem;
   color: hsl(186, 14%, 43%);
   padding: 1.5rem;
@@ -38,7 +38,7 @@ body {
 
 .input {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 0.5rem;
 }
 .input .box {
@@ -50,6 +50,7 @@ body {
   border: none;
   border-radius: 5px;
   background-color: hsl(189, 41%, 97%);
+  outline: none;
 }
 .input .box :placeholder {
   color: hsl(183, 100%, 15%);
@@ -64,10 +65,70 @@ body {
   top: 45px;
   left: 15px;
 }
+.input .input__select-tip {
+  display: grid;
+  gap: 1em;
+}
+.input .input__select-tip .tip-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.input .input__select-tip .tip-buttons button {
+  font: inherit;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(183, 100%, 15%);
+}
+.input .input__people {
+  position: relative;
+  display: grid;
+  gap: 0.4em;
+}
+.input .input__people img {
+  position: absolute;
+  top: 45px;
+  left: 15px;
+}
 
 .output {
+  display: grid;
+  gap: 1.5rem;
   padding: 1.5rem;
+  border-radius: 10px;
   background-color: hsl(183, 100%, 15%);
+}
+.output .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.output .flex div .title {
+  color: hsl(0, 0%, 100%);
+}
+.output .flex div .subtitle {
+  font-size: 0.875rem;
+}
+.output .flex .amount {
+  font-size: 1.8rem;
+  color: hsl(172, 67%, 45%);
+}
+.output .flex .total {
+  font-size: 1.8rem;
+  color: hsl(172, 67%, 45%);
+}
+.output .reset-btn {
+  font: inherit;
+  font-size: 1.3rem;
+  color: hsl(183, 100%, 15%);
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(172, 67%, 45%);
 }
 
 /*# sourceMappingURL=style.css.map */

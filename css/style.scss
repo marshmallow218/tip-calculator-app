@@ -39,7 +39,7 @@ body {
 
 .container {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
     font-size: 0.9375rem;
     color: $dark-grayish-cyan;
     padding: 1.5rem;
@@ -49,7 +49,7 @@ body {
 
 .input {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 0.5rem;
     
     .box {
@@ -61,10 +61,11 @@ body {
         border: none;
         border-radius: 5px;
         background-color: $very-light-grayish-cyan;
+        outline: none;
         
         :placeholder {
             color: $very-dark-cyan;
-        }
+        }        
     }
     
     .input__bill {
@@ -78,11 +79,85 @@ body {
             left: 15px;
         }               
     }
+    
+    .input__select-tip {
+        display: grid;
+        gap: 1em;
+        
+        .tip-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            
+            button {
+                font: inherit;
+                font-size: 1.5rem;
+                color: $white;
+                padding: 0.4rem 0.8rem;
+                border: none;
+                border-radius: 5px;
+                background-color: $very-dark-cyan;
+            }
+        }
+    }
+    
+    .input__people {
+        position: relative;
+        display: grid;
+        gap: 0.4em;
+        
+        img {
+            position: absolute;
+            top: 45px;
+            left: 15px;
+        }
+    }
 }
 
 .output {
+    display: grid;
+    gap: 1.5rem;
     padding: 1.5rem;
+    border-radius: 10px;
     background-color: $very-dark-cyan;
+    
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        div {   
+             
+            .title {
+                color: $white;
+            }
+            
+            .subtitle {
+                font-size: 0.875rem;
+            }                              
+        }
+        
+        .amount {
+            font-size: 1.8rem;
+            color: $strong-cyan;
+        }
+            
+        .total {
+            font-size: 1.8rem;
+            color: $strong-cyan;
+        }      
+    } 
+    
+    .reset-btn {
+        font: inherit;
+        font-size: 1.3rem;
+        color: $very-dark-cyan;
+        padding: 0.4rem 0.8rem;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 5px;
+        background-color: $strong-cyan;
+    } 
 }
 
 
