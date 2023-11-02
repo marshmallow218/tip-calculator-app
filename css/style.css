@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 
 html {
@@ -44,16 +43,20 @@ body {
 .input .box {
   font: inherit;
   font-size: 1.5rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.3rem 0.7rem;
   width: 100%;
   text-align: right;
-  border: none;
+  transition: 0.3s;
+  border: 2px solid transparent;
   border-radius: 5px;
   background-color: hsl(189, 41%, 97%);
-  outline: none;
 }
-.input .box :placeholder {
+.input .box:placeholder {
   color: hsl(183, 100%, 15%);
+}
+.input .box:focus {
+  border: 2px solid hsl(172, 67%, 45%);
+  outline: none;
 }
 .input .input__bill {
   position: relative;
@@ -79,14 +82,34 @@ body {
   font-size: 1.5rem;
   color: hsl(0, 0%, 100%);
   padding: 0.4rem 0.8rem;
+  transition: 0.3s;
   border: none;
   border-radius: 5px;
   background-color: hsl(183, 100%, 15%);
+}
+.input .input__select-tip .tip-buttons button:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 70%);
+}
+.input .input__select-tip .tip-buttons .selected {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
 }
 .input .input__people {
   position: relative;
   display: grid;
   gap: 0.4em;
+}
+.input .input__people .error {
+  border-color: hsl(0, 100%, 50%);
+}
+.input .input__people label {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.input .input__people label span {
+  display: none;
+  color: hsla(0, 100%, 50%, 0.6);
 }
 .input .input__people img {
   position: absolute;
@@ -95,11 +118,16 @@ body {
 }
 
 .output {
-  display: grid;
-  gap: 1.5rem;
   padding: 1.5rem;
   border-radius: 10px;
   background-color: hsl(183, 100%, 15%);
+}
+.output .output__tip {
+  margin-top: 1em;
+  margin-bottom: 1.3rem;
+}
+.output .output__total {
+  margin-bottom: 1.6rem;
 }
 .output .flex {
   display: flex;
@@ -113,11 +141,11 @@ body {
   font-size: 0.875rem;
 }
 .output .flex .amount {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: hsl(172, 67%, 45%);
 }
 .output .flex .total {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: hsl(172, 67%, 45%);
 }
 .output .reset-btn {
@@ -125,10 +153,52 @@ body {
   font-size: 1.3rem;
   color: hsl(183, 100%, 15%);
   padding: 0.4rem 0.8rem;
+  width: 100%;
   text-transform: uppercase;
+  transition: 0.3s;
   border: none;
   border-radius: 5px;
   background-color: hsl(172, 67%, 45%);
+}
+.output .reset-btn:hover {
+  background-color: hsl(172, 67%, 80%);
+}
+.output .reset-btn:disabled {
+  background-color: hsl(172, 67%, 25%);
+}
+
+/* Responsive */
+@media (min-width: 1000px) {
+  main {
+    max-width: 900px;
+  }
+  main .logo {
+    margin-bottom: 5em;
+  }
+  main .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+  .input {
+    gap: 2rem;
+  }
+  .input .input__select-tip .tip-buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  .output .flex .amount {
+    font-size: 2.5rem;
+  }
+  .output .flex .total {
+    font-size: 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
